@@ -1,0 +1,110 @@
+@import "./global__media";
+@import "./variables";
+
+@mixin breakpoints($min-width, $max-width: false, $media-type: false) {
+  @if $media-type {
+    @if $max-width {
+      @media #{$media-type} and (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+      }
+    }
+
+    @else {
+      @media #{$media-type} and (min-width: $min-width) {
+        @content;
+      }
+    }
+  }
+
+  @else {
+    @if $max-width {
+      @media all and (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+      }
+    }
+
+    @else {
+      @media all and (min-width: $min-width) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin mobile {
+  @include breakpoints(#{$breakpoint-mobile}, #{$breakpoint-tablet} - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include breakpoints(#{$breakpoint-tablet}, #{$breakpoint-desktop} - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include breakpoints(#{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin no-drag {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@mixin icon {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin button($type) {
+  &:hover {
+    cursor: pointer;
+    @include no-drag
+  }
+}
+
+@mixin fontSet($size: #{$base-font-size}, $color: #{$default-color}, $weight: 'regular') {
+  font-size: $size;
+  color: $color;
+
+  @if $weight=='extra-bold' {
+    font-weight: 800
+  }
+
+  @else if $weight=='bold' {
+    font-weight: 700
+  }
+
+  @else if $weight=='medium' {
+    font-weight: 500;
+  }
+
+  @else if $weight=='regular' {
+    font-weight: 400;
+  }
+
+  @else if $weight=='light' {
+    font-weight: 300;
+  }
+}
+
+@mixin textBoxSet($type) {
+  @if($type==type-a) {
+    padding: 16px;
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+  }
+
+  @if($type==type-b) {
+    padding: 14px;
+    color: #fff;
+    background-color: #333;
+  }
+}

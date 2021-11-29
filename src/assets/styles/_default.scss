@@ -1,0 +1,51 @@
+@import "./variables";
+@import "./mixins";
+
+@include mobile {
+    $h1-font-size: #{$mobile-h1-font-size};
+    $h2-font-size: #{$mobile-h2-font-size};
+    $h3-font-size: #{$mobile-h3-font-size};
+    $h4-font-size: #{$mobile-h4-font-size};
+    $h5-font-size: #{$mobile-h5-font-size};
+    $h6-font-size: #{$mobile-h6-font-size};
+    $b1-font-size: #{$mobile-b1-font-size};
+    $b2-font-size: #{$mobile-b2-font-size};
+    $b3-font-size: #{$mobile-b3-font-size};
+    $base-font-size: #{$mobile-base-font-size};
+}
+
+@include tablet {
+    $h1-font-size: #{$tablet-h1-font-size};
+    $h2-font-size: #{$tablet-h2-font-size};
+    $h3-font-size: #{$tablet-h3-font-size};
+    $h4-font-size: #{$tablet-h4-font-size};
+    $h5-font-size: #{$tablet-h5-font-size};
+    $h6-font-size: #{$tablet-h6-font-size};
+    $b1-font-size: #{$tablet-b1-font-size};
+    $b2-font-size: #{$tablet-b2-font-size};
+    $b3-font-size: #{$tablet-b3-font-size};
+    $base-font-size: #{$tablet-base-font-size};
+}
+
+@include desktop {
+    $h1-font-size: #{$desktop-h1-font-size};
+    $h2-font-size: #{$desktop-h2-font-size};
+    $h3-font-size: #{$desktop-h3-font-size};
+    $h4-font-size: #{$desktop-h4-font-size};
+    $h5-font-size: #{$desktop-h5-font-size};
+    $h6-font-size: #{$desktop-h6-font-size};
+    $b1-font-size: #{$desktop-b1-font-size};
+    $b2-font-size: #{$desktop-b2-font-size};
+    $b3-font-size: #{$desktop-b3-font-size};
+    $base-font-size: #{$desktop-base-font-size};
+}
+
+.icon, .material-icons, .material-icons-outlined, .material-icons-round, .material-icons-sharp, .material-icons-two-tone {
+    @include icon;
+    @include button(icon);
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+}

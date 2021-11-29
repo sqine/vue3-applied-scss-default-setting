@@ -1,0 +1,67 @@
+$font-weight-extra-large: 800;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+$base-font-size: 14px;
+$base-font-weight: #{$font-weight-regular};
+
+$desktop-h1-font-size: 36px;
+$desktop-h2-font-size: 28px;
+$desktop-h3-font-size: 24px;
+$desktop-h4-font-size: 21px;
+$desktop-h5-font-size: 18px;
+$desktop-h6-font-size: 16px;
+
+$desktop-b1-font-size: 16px;
+$desktop-b2-font-size: 14px;
+$desktop-b3-font-size: 12px;
+
+$desktop-base-font-size: #{$desktop-b2-font-size};
+
+$tablet-h1-font-size: 36px;
+$tablet-h2-font-size: 28px;
+$tablet-h3-font-size: 24px;
+$tablet-h4-font-size: 21px;
+$tablet-h5-font-size: 18px;
+$tablet-h6-font-size: 16px;
+
+$tablet-b1-font-size: 16px;
+$tablet-b2-font-size: 14px;
+$tablet-b3-font-size: 11px;
+
+$tablet-base-font-size: #{$tablet-b2-font-size};
+
+$mobile-h1-font-size: 36px;
+$mobile-h2-font-size: 28px;
+$mobile-h3-font-size: 24px;
+$mobile-h4-font-size: 21px;
+$mobile-h5-font-size: 18px;
+$mobile-h6-font-size: 16px;
+
+$mobile-b1-font-size: 16px;
+$mobile-b2-font-size: 14px;
+$mobile-b3-font-size: 11px;
+
+$mobile-base-font-size: #{$mobile-b2-font-size};
+
+$font-family-default: 'Open Sans';
+
+$color-primary: #FC2D51;
+
+$color-point1: #E64A34;
+$color-point2: #FF9063;
+
+$color-grey-level1: #F6F6F6;
+$color-grey-level2: #E5E5E5;
+$color-grey-level3: #C3C3C3;
+$color-grey-level4: #959595;
+$color-grey-level5: #4D4D4D;
+$color-grey-level6: #292929;
+
+$color-white: white;
+$color-black: black;
+
+$bg-color: #{$color-grey-level1};
+$default-color: #{$color-grey-level6};
